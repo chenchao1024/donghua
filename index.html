@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<style type="text/css">
+			.d1 {
+				width: 300px;
+				height: 200px;
+				/* border: 1px solid #ccc; */
+				background-image: url(img/mr.png);
+				background-size: auto;
+				position: absolute;
+				left: 0;
+				top: 0;
+				z-index: 1;
+			}
+
+			@keyframes lxw {
+				from {
+
+					background-position: 0 0;
+				}
+
+				to {
+					background-position: 0 3072px;
+				}
+			}
+
+			#lx:checked~.d1 {
+				animation: lxw 2s steps(16) infinite;
+			}
+
+			.d2 {
+				width: 300px;
+				height: 200px;
+				/* border: 1px solid #ccc; */
+				background-image: url(img/ql%20.png);
+				/* 背景图片大小
+				 注意元素宽度的百分比*/
+				background-size: 960px auto;
+				animation: ql 2s steps(23) infinite;
+				position: absolute;
+				left: 0;
+				top: 0;
+			}
+
+			@keyframes ql {
+				from {
+					background-position: 0 0;
+
+				}
+
+				to {
+					/* 图片 */
+					background-position: 0 -4416px;
+				}
+			}
+
+			.main {
+				width: 600px;
+				height: 400px;
+				margin: 0 auto;
+				border: 1px solid #999;
+				position: relative;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="main">
+			<input type="checkbox" name="" id="lx" value="" hidden="hidden" />
+			<div class="d1">
+
+
+			</div>
+
+			<div class="d2"></div>
+		</div>
+
+		<label for="lx">放螺旋丸</label>
+
+	</body>
+</html>
